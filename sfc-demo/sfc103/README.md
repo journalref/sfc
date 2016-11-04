@@ -16,7 +16,7 @@ On your network. Normally, it takes several hours.
 
 Global Topology
 ---------------
-
+```sh
                            +-----------------+
                            |       SFC       |
                            |   192.168.1.5   |
@@ -34,10 +34,11 @@ Global Topology
                    |     DPI-1     |  |     FW-1     |
                    | 192.168.1.30  |  | 192.168.1.40 |
                    +---------------+  +--------------+
+```
 
 Classifiers Topology
 --------------------
-
+```sh
             +---------------------------------+
             |            ARP Cache            |
             + - - - - - - - - - - - - - - - - +
@@ -69,7 +70,7 @@ Classifiers Topology
             + - - - - - - - - - - - - - - - - +
             | 192.168.2.1 | 00:00:11:11:11:11 |
             +---------------------------------+
-
+```
 Setup Demo
 ----------
 1. Install virtualbox & vagrant(>=1.8.0) in ubuntu 14.04.03
