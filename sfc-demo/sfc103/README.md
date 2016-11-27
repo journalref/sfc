@@ -7,6 +7,7 @@ Overview
 SFC103 demo is to show standalone SFC classifier including dynamic insert
 & remove service function.
 
+Ubuntu 14.04.1 desktop, kernel version 3.13 required! 
 Note
 ----
 
