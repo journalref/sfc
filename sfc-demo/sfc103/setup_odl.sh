@@ -46,8 +46,8 @@ function install_ovs {
     git am *.patch
     sudo DEB_BUILD_OPTIONS='parallel=8 nocheck' fakeroot debian/rules binary
     sudo dpkg -i $HOME/openvswitch-datapath-dkms* $HOME/openvswitch-common* $HOME/openvswitch-switch* ../python-openvswitch*
-    mkdir -p /vagrant/ovs-debs
-    cp $HOME/openvswitch-common*.deb $HOME/openvswitch-switch*.deb /vagrant/ovs-debs/
+    mkdir -p $HOME/ovs-debs
+    cp $HOME/openvswitch-common*.deb $HOME/openvswitch-switch*.deb $HOME/ovs-debs/
 }
 
 function install_sfc {
