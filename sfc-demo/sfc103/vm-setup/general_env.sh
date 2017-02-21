@@ -1,0 +1,27 @@
+export CONTROLLER_IP='10.20.0.5'
+export DEFAULT_PORT='8181'
+
+export USERNAME='admin'
+export PASSWORD='admin'
+
+export APP_CLIENT_IP=192.168.1.1
+export APP_CLIENT_CIDR=192.168.1.1/24
+export APP_CLIENT_MAC=00:00:11:11:11:11
+
+export APP_SERVER_IP=192.168.1.2
+export APP_SERVER_CIDR=192.168.1.2/24
+export APP_SERVER_MAC=00:00:22:22:22:22
+
+export CLASSIFIER1_IP='10.20.0.10'
+export CLASSIFIER2_IP='10.20.0.60'
+ 
+export SFF1_IP='10.20.0.20'
+export SFF2_IP='10.20.0.50'
+
+export SF1_IP='10.20.0.30'
+export SF1_URI='http://10.20.0.30:5000'
+
+export SF2_IP='10.20.0.40'
+export SF2_URI='http://10.20.0.40:5000'
+
+export ENDPOINT_NET='192.168.1.0/24'
