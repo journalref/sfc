@@ -20,7 +20,7 @@ def get_controller_info():
     controller_ip = ''
     default_port = ''
     try:
-        controller_ip = environ["CONTROLLER"]
+        controller_ip = environ["CONTROLLER_IP"]
         default_port = environ["DEFAULT_PORT"]
     except KeyError:
         print "Please set the environment variables first!"
