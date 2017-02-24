@@ -74,7 +74,7 @@ Classifiers Topology
 ```
 Setup Demo
 ----------
-- This setup requires 7 host: 6 hosts for service nodes (2 SFFs, 2 SFs, 2 Classifiers) and 1 host for OpenDaylight SFC Controller
+- This setup requires 7 host: 6 hosts for service nodes (2 SFFs, 2 SFs, 2 Classifiers) and 1 host for OpenDaylight SFC Controller (in this demo, i used my physical host as odl controller and 6 KVM virtual machines for service nodes).
 - Set appropriate hostname for each host: sff1, sff2, sf1, sf2, classifier1, classifier2, controller
 - Install git client: `sudo apt-get update; sudo apt-get install git -y`
 - Clone sfc repo: 
@@ -107,7 +107,7 @@ Setup Demo
   Your action:
   ```
   Wait for a few minutes until sfc installed or updated successfully. Then go to service nodes and dump flows of `br-sfc` by executing `./general_actions.sh` with action 3.
-  That's all! 
+  That's all! Please give me feedback if you encounter any errors.
 
 Trouble Shooting(TBD)
 --------------------
