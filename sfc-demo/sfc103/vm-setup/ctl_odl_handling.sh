@@ -38,15 +38,19 @@ function start_sfc {
     fi
 }
 
+printf "Choose one of the following actions:\n1 - Stop OpenDaylight\n2 - Start OpenDaylight\nYour action: "
 
+read option 
 
-
-echo "SFC DEMO: Stop ODL"
-stop_odl
-
-echo "SFC DEMO: Start SFC"
-start_sfc
-
-echo "SFC DEMO: Give some time to have all things ready..."
-sleep 120
-echo "done"
+if [ $option == 1 ]; then
+    echo "Stop ODL" 
+    stop_odl
+elif [ $option == 2 ]; then
+    echo "Start ODL SFC"
+    start_sfc
+    echo "Wait for all odl features ready..."
+    sleep 60
+    echo "done"
+else 
+    exit 1
+fi

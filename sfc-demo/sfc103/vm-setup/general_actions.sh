@@ -4,6 +4,7 @@ source general_env.sh
 
 function dump_flows {
     host=`hostname`
+    ./test.py
     if [ $host  == 'classifier1'  ] || [ $host == 'classifier2' ] || [ $host == 'sff1' ] || [ $host == 'sff2' ]; then
         sudo ovs-ofctl dump-flows -OOpenflow13 br-sfc
         if [ $host  == 'classifier1'  ] ; then
@@ -15,7 +16,7 @@ function dump_flows {
 function setup_sfc {
     host=`hostname`
     if [ $host  == 'controller'  ]; then
-        /sfc/sfc-demo/sfc103/ctl_setup_sfc.py
+        ./ctl_setup_sfc.py
     fi
     # wait for openflow effective
     sleep 60
@@ -25,7 +26,7 @@ function update_sfc {
     # dynamic insert & remove sf
     host=`hostname`
     if [ $host  == 'controller'  ]; then
-        /sfc/sfc-demo/sfc103/ctl_update_sfc.py
+        ./ctl_update_sfc.py
     fi    
     # wait for openflow effective
     sleep 60
