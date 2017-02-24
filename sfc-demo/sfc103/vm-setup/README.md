@@ -74,8 +74,40 @@ Classifiers Topology
 ```
 Setup Demo
 ----------
-In progress
-
+- This setup requires 7 host: 6 hosts for service nodes (2 SFFs, 2 SFs, 2 Classifiers) and 1 host for OpenDaylight SFC Controller
+- Set appropriate hostname for each host: sff1, sff2, sf1, sf2, classifier1, classifier2, controller
+- Install git client: `sudo apt-get update; sudo apt-get install git -y`
+- Clone sfc repo: 
+  ```sh
+  cd ~/
+  git clone https://github.com/thaihust/sfc.git sfc-labs
+  ```
+- Change directory to sfc103 and begin starting setup necessary packages (ODL SFC for controller node and Open vSwitch enabled NSH version 2.6.1 from yyang's repo): 
+  ```sh
+  cd ~/sfc-labs/sfc-demo/sfc103/vm-setup
+  ./general_setup.sh
+  ```
+- Modify file `general_env.sh` to fit your own environment setup.
+- On OpenDaylight host, start opendaylight controller with sfc features:
+  ```sh
+  cd ~/sfc-labs/sfc-demo/sfc103/vm-setup
+  ./ctl_odl_handling.sh
+  `````
+- On Service hosts, configure sfc components according to the topo:
+  ```sh
+  cd ~/sfc-labs/sfc-demo/sfc103/vm-setup
+  sudo ./srv_node_start.sh 
+  ```
+- On OpenDaylight host, create and update sfc: `./general_actions.sh`, a message will appear and give 3 actions like this:
+  ```sh
+  Choose one of the following actions:
+  1 - Install sfc(for controller node)
+  2 - Update sfc(for controller node)
+  3 - Dump flows on bridge(for service nodes)
+  Your action:
+  ```
+  Wait for a few minutes until sfc installed or updated successfully. Then go to service nodes and dump flows of `br-sfc` by executing `./general_actions.sh` with action 3.
+  That's all! 
 
 Trouble Shooting(TBD)
 --------------------

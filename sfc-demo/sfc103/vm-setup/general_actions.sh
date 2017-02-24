@@ -19,7 +19,6 @@ function setup_sfc {
     fi
     # wait for openflow effective
     sleep 60
-    dump_flows
 }
 
 function update_sfc {
@@ -30,11 +29,21 @@ function update_sfc {
     fi    
     # wait for openflow effective
     sleep 60
-    dump_flows
 }
 
-echo "SFC DEMO: Setup SFC"
-setup_sfc
+printf "Choose one of the following actions:\n1 - Install sfc(for controller node)\n2 - Update sfc(for controller node)\n3 - Dump flows on bridge(for service nodes)\nYour action: "
 
-echo "SFC DEMO: Update SFC"
-update_sfc
+read option 
+
+if [ $option == 1 ]; then
+    echo "Setup SFC" 
+    setup_sfc
+elif [ $option == 2 ]; then
+    echo "Update SFC"
+    update_sfc
+elif [ $option == 3 ]; then
+    echo "Dump flows"
+    dump_flows
+else 
+    exit 1
+fi
