@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source env.sh
+source general_env.sh 
 
 function dump_flows {
     host=`hostname`

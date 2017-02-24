@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source env.sh
+source general_env.sh 
 
 function stop_odl {
     printf "Stopping karaf ...  "

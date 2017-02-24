@@ -43,7 +43,7 @@ elif [ $host == 'sff1' ] || [ $host == 'sff2' ]; then
     ovs_start
     ovs-vsctl show
 elif [ $host == 'sf1' ] || [ $host == 'sf2' ]; then
-    cd /sfc/sfc-py;
+    cd ../../../sfc-py;
     pip3 install -r requirements.txt
     nohup python3.4 sfc/sfc_agent.py --rest --odl-ip-port $CONTROLLER_IP:8181 &
 fi
