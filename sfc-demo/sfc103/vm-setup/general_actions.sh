@@ -4,7 +4,6 @@ source general_env.sh
 
 function dump_flows {
     host=`hostname`
-    ./test.py
     if [ $host  == 'classifier1'  ] || [ $host == 'classifier2' ] || [ $host == 'sff1' ] || [ $host == 'sff2' ]; then
         sudo ovs-ofctl dump-flows -OOpenflow13 br-sfc
         if [ $host  == 'classifier1'  ] ; then
