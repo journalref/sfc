@@ -109,7 +109,7 @@ Setup Demo
   
   Wait for a few minutes until sfc installed or updated successfully. Then go to service nodes and dump flows of `br-sfc` by executing `./general_actions.sh` with action 3.
 
-- To clean all sfc components (sff, sf, sfc, sfp, rsp, etc.): `./ctl_cleanup.py`
+- To clean all sfc components (sff, sf, sfc, sfp, rsp, etc.), on OpenDaylight host, execute: `./ctl_cleanup.py`
 
   That's all! Please give me feedback if you encounter any errors!
 
