@@ -4,16 +4,7 @@ SFC103 Demo
 Overview
 --------
 
-SFC103 demo is to show standalone SFC classifier including dynamic insert
-& remove service function.
-
-Ubuntu 14.04.3 server! 
-Note
-----
-
-It takes long time to complete the demo including vagrant box download,
-SFC download/build and ovs with NSH installation. The duration depends
-On your network. Normally, it takes several hours.
+SFC103 VM setup version, ubuntu 14.04.3 server required! 
 
 Global Topology
 ---------------
