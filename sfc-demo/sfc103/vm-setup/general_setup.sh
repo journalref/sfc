@@ -6,7 +6,7 @@ host=`hostname`
 
 function install_packages {
     sudo apt-get update
-    sudo apt-get install npm vim git git-review diffstat bridge-utils -y
+    sudo apt-get install npm vim git git-review diffstat bridge-utils curl -y
 
     #install java8
     echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
@@ -34,7 +34,7 @@ function install_ovs {
     # Open vSwitch with VxLAN-GPE and NSH support
     cd $HOME
     sudo apt-get install -y git libtool m4 autoconf automake make libssl-dev libcap-ng-dev python3 python-six vlan iptables \
-         graphviz debhelper dh-autoreconf python-all python-qt4 python-twisted-conch
+         graphviz debhelper dh-autoreconf python-all python-qt4 python-twisted-conch curl
     wget https://raw.githubusercontent.com/thaihust/ovs_nsh_patches/master/start-ovs-deb-2.6.1.sh
     chmod +x start-ovs-deb-2.6.1.sh
     ./start-ovs-deb-2.6.1.sh
