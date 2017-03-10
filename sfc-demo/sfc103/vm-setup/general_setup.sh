@@ -34,7 +34,7 @@ function install_ovs {
     # Open vSwitch with VxLAN-GPE and NSH support
     cd $HOME
     sudo apt-get install -y git libtool m4 autoconf automake make libssl-dev libcap-ng-dev python3 python-six vlan iptables \
-         graphviz debhelper dh-autoreconf python-all python-qt4 python-twisted-conch curl
+         graphviz debhelper dh-autoreconf python-all python-qt4 python-twisted-conch curl python3-pip
     wget https://raw.githubusercontent.com/thaihust/ovs_nsh_patches/master/start-ovs-deb-2.6.1.sh
     chmod +x start-ovs-deb-2.6.1.sh
     ./start-ovs-deb-2.6.1.sh
